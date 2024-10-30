@@ -6,18 +6,12 @@ for i in range(b):
     a.append(randint(-100, 100))
 print(a)
 def insertion_sort(a):
-    d=0
-    for k in range(b-d-1):
-        for j in range(b-1):
-            while True:
-                if a[j]<a[k]:
-                    break
-                else:
-                    c=a[j]
-                    a[j]=a[k]
-                    a[k]=c
-                    print(a)
-        d+=1
+    for i in range(b):
+        for j in range(i+1,b):
+            if a[j]<a[i]:
+                c=a[j]
+                a[j]=a[i]
+                a[i]=c
     print(a)
 t1=time.time()
 insertion_sort(a)
