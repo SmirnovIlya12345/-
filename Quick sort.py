@@ -28,3 +28,6 @@ t1=time.time()
 print(quick_sort(a, b))
 t2=time.time()
 print(t2-t1)
+
+
+
