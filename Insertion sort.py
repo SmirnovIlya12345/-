@@ -7,11 +7,13 @@ for i in range(b):
 print(a)
 def insertion_sort(a):
     for i in range(b):
-        for j in range(i+1,b):
-            if a[j]<a[i]:
-                c=a[j]
-                a[j]=a[i]
-                a[i]=c
+        for j in range(i):
+            if a[i-j]<a[i-j-1]:
+                c=a[i-j-1]
+                a[i-j-1]=a[i-j]
+                a[i-j]=c
+            else:
+                break
     print(a)
 t1=time.time()
 insertion_sort(a)
