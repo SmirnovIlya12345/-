@@ -1,29 +1,23 @@
 from random import randint
 import time
+import Library
 a=[]
 b=int(input())
 for i in range(b):
-    a.append(randint(-100, 100))
-print(a)
-def bogo_sort(a):
-    q=0
-    while True:
-        c=0
-        for j in range(b-1):
-            if a[j]>a[j+1]:
-                c=1
-                break
-        if c==0:
-            break
-        else:
-            r1=randint(0, b-1)
-            r2=randint(0, b-1)
-            c=a[r1]
-            a[r1]=a[r2]
-            a[r2]=c
-            q+=1
-    print(a,q)
+    a.append(randint(-1000, 1000))
 t1=time.time()
-bogo_sort(a)
+print(Library.quick_sort(a))
 t2=time.time()
 print(t2-t1)
+print(Library.merge_sort(a))
+t3=time.time()
+print(t3-t2)
+Library.insertion_sort(a)
+t4=time.time()
+print(t4-t3)
+Library.bubble_sort(a)
+t5=time.time()
+print(t5-t4)
+Library.bogo_sort(a)
+t6=time.time()
+print(t6-t5)

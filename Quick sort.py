@@ -5,6 +5,7 @@ b=int(input())
 for i in range(b):
     a.append(randint(-100, 100))
 print(a)
+from random import randint
 def quick_sort(a, b):
     if len(a)<=1:
         return a
