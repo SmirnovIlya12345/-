@@ -3,8 +3,9 @@ import time
 a=[]
 b=int(input())
 for i in range(b):
-    a.append(randint(-100, 100))
+    a.append(randint(-1000, 1000))
 print(a)
+print(b)
 def merge_sort(a):
     if len(a)<=1:
         return(a)
